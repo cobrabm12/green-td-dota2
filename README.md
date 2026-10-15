@@ -6,6 +6,8 @@ sunt extrase automat din fișierul original `.w3x`, nu sunt copiate de mână.
 
 *A Dota 2 custom game port of the Warcraft III map Green TD v36.0 by Sencility, with the same gameplay.*
 
+Steam Workshop (Dota 2 Arcade): https://steamcommunity.com/sharedfiles/filedetails/?id=3820224535
+
 ## Credite
 
 - Harta originală **Green TD v36.0**: Sencility. Acest proiect e un port neoficial, făcut de fani;
