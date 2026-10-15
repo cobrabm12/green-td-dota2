@@ -1,0 +1,15 @@
+_work/
+__pycache__/
+*.pyc
+
+# build outputs of the Workshop Tools (sources are in content/)
+*_c
+game/dota_addons/green_td/maps/*.vpk
+game/dota_addons/green_td/tools_asset_info.bin
+game/dota_addons/green_td/tools_thumbnail_cache.sqlite3
+
+# data of the original map and of Warcraft III (Blizzard) - download with tools/wc3/fetch_data.sh
+tools/wc3/data/
+tools/wc3/slk/
+# list of Dota's own files - make with tools/vpkls.py (see README)
+tools/dota_assets.txt

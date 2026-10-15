@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"maps"			"green_td"
+	"IsPlayable"	"1"
+	"green_td"
+	{
+		"MaxPlayers"	"9"
+	}
+}

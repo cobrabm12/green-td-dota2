@@ -1,0 +1,58 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/gtd_hud.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/gtd_data.js" />
+		<include src="file://{resources}/scripts/custom_game/gtd_hud.js" />
+	</scripts>
+	<Panel class="GtdRoot" hittest="false">
+		<!-- top: wave / chances / timer -->
+		<Panel id="TopBar" hittest="false">
+			<Label id="WaveLabel" text="Green TD" />
+			<Label id="WaveKind" text="" />
+			<Label id="TimerLabel" text="" />
+			<Label id="ChancesLabel" text="" />
+		</Panel>
+
+		<!-- right: leaderboard (WC3 multiboard) -->
+		<Panel id="Board" hittest="false">
+			<Label class="BoardTitle" text="Green TD          KILLS" />
+			<Panel class="BoardRow">
+				<Label class="BoardName" text="Current LVL &gt;&gt;&gt;" />
+				<Label id="BoardLevel" class="BoardValue" text="0" />
+			</Panel>
+			<Panel id="BoardPlayers" />
+			<Panel class="BoardRow">
+				<Label class="BoardName" text="CHANCES &gt;&gt;&gt;" />
+				<Label id="BoardChances" class="BoardValue" text="60" />
+			</Panel>
+		</Panel>
+
+		<!-- center messages -->
+		<Panel id="Messages" hittest="false" />
+
+		<!-- bottom: gold + build menu + selected tower -->
+		<Panel id="RightColumn" hittest="false">
+			<Panel id="GoldBox" hittest="false">
+				<Panel class="GoldIcon" />
+				<Label id="GoldLabel" text="0" />
+			</Panel>
+
+			<Panel id="BuildMenu">
+				<Label class="PanelTitle" text="Build" />
+				<Panel id="BuildButtons" />
+			</Panel>
+		</Panel>
+
+		<Panel id="TowerPanel" class="Hidden">
+			<Label id="TowerName" class="PanelTitle" text="" />
+			<Label id="TowerDesc" text="" />
+			<Label id="TowerStats" text="" />
+			<Panel id="UpgradeButtons" />
+			<Button id="SellButton" class="GtdButton SellButton" onactivate="GtdSell()">
+				<Label id="SellLabel" text="Sell" />
+			</Button>
+		</Panel>
+	</Panel>
+</root>

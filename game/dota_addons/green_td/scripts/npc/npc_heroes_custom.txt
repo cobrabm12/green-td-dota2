@@ -1,0 +1,31 @@
+"DOTAHeroes"
+{
+	// The builder (WC3: "Shadow", a flying Shade). Every player is forced to this hero.
+	"npc_dota_hero_wisp"
+	{
+		"override_hero"			"npc_dota_hero_wisp"
+		"Ability1"				"gtd_build"
+		"Ability2"				"gtd_empty1"
+		"Ability3"				"gtd_empty2"
+		"Ability4"				"gtd_empty3"
+		"Ability5"				"gtd_empty4"
+		"Ability6"				"gtd_empty5"
+		"Ability10"				""
+		"Ability11"				""
+		"Ability12"				""
+		"Ability13"				""
+		"Ability14"				""
+		"Ability15"				""
+		"Ability16"				""
+		"Ability17"				""
+		"AbilityLayout"			"1"
+		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
+		"MovementSpeed"			"522"
+		"MovementTurnRate"		"1.0"
+		"StatusHealth"			"500"
+		"StatusMana"			"20"
+		"VisionDaytimeRange"	"1800"
+		"VisionNighttimeRange"	"1800"
+		"BoundsHullName"		"DOTA_HULL_SIZE_SMALL"
+	}
+}

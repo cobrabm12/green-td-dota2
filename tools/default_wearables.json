@@ -1,0 +1,2069 @@
+{
+ "models/heroes/abaddon/": {
+  "hero": "npc_dota_hero_abaddon",
+  "items": [
+   454,
+   455,
+   456,
+   457,
+   458
+  ],
+  "slots": [
+   "",
+   "head",
+   "back",
+   "shoulder",
+   "mount"
+  ]
+ },
+ "models/heroes/abyssal_underlord/mesh/": {
+  "hero": "npc_dota_hero_abyssal_underlord",
+  "items": [
+   619,
+   620,
+   621,
+   622
+  ],
+  "slots": [
+   "armor",
+   "head",
+   "",
+   "body_head"
+  ]
+ },
+ "models/heroes/alchemist/": {
+  "hero": "npc_dota_hero_alchemist",
+  "items": [
+   117,
+   118,
+   119,
+   120,
+   121,
+   122,
+   123,
+   124,
+   125
+  ],
+  "slots": [
+   "back",
+   "",
+   "armor",
+   "arms",
+   "neck",
+   "offhand_weapon",
+   "head",
+   "body_head",
+   "shoulder"
+  ]
+ },
+ "models/heroes/ancient_apparition/": {
+  "hero": "npc_dota_hero_ancient_apparition",
+  "items": [
+   648,
+   652
+  ],
+  "slots": [
+   "shoulder",
+   "tail"
+  ]
+ },
+ "models/heroes/antimage/": {
+  "hero": "npc_dota_hero_antimage",
+  "items": [
+   1,
+   215,
+   216,
+   217,
+   218,
+   335
+  ],
+  "slots": [
+   "",
+   "head",
+   "armor",
+   "arms",
+   "belt",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/arc_warden/": {
+  "hero": "npc_dota_hero_arc_warden",
+  "items": [
+   556,
+   557,
+   598
+  ],
+  "slots": [
+   "arms",
+   "shoulder",
+   "back"
+  ]
+ },
+ "models/heroes/axe/": {
+  "hero": "npc_dota_hero_axe",
+  "items": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "slots": [
+   "",
+   "armor",
+   "head",
+   "belt"
+  ]
+ },
+ "models/heroes/bane/": {
+  "hero": "npc_dota_hero_bane",
+  "items": [
+   612,
+   613
+  ],
+  "slots": [
+   "head",
+   "shoulder"
+  ]
+ },
+ "models/heroes/bard/": {
+  "hero": "npc_dota_hero_largo",
+  "items": [
+   857,
+   858,
+   859
+  ],
+  "slots": [
+   "shoulder",
+   "legs",
+   ""
+  ]
+ },
+ "models/heroes/batrider/": {
+  "hero": "npc_dota_hero_batrider",
+  "items": [
+   375,
+   376,
+   377,
+   378
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "belt",
+   "mount"
+  ]
+ },
+ "models/heroes/beastmaster/": {
+  "hero": "npc_dota_hero_beastmaster",
+  "items": [
+   313,
+   314,
+   315,
+   316,
+   317
+  ],
+  "slots": [
+   "",
+   "head",
+   "shoulder",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/blood_seeker/": {
+  "hero": "npc_dota_hero_bloodseeker",
+  "items": [
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   257
+  ],
+  "slots": [
+   "",
+   "head",
+   "offhand_weapon",
+   "shoulder",
+   "back",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/bounty_hunter/": {
+  "hero": "npc_dota_hero_bounty_hunter",
+  "items": [
+   50,
+   51,
+   52,
+   53,
+   54,
+   55
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "back",
+   "armor",
+   "shoulder",
+   "head"
+  ]
+ },
+ "models/heroes/brewmaster/": {
+  "hero": "npc_dota_hero_brewmaster",
+  "items": [
+   158,
+   159,
+   160,
+   161,
+   162
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "arms",
+   "back",
+   "shoulder"
+  ]
+ },
+ "models/heroes/bristleback/": {
+  "hero": "npc_dota_hero_bristleback",
+  "items": [
+   436,
+   437,
+   438,
+   439,
+   440
+  ],
+  "slots": [
+   "back",
+   "head",
+   "",
+   "arms",
+   "neck"
+  ]
+ },
+ "models/heroes/broodmother/": {
+  "hero": "npc_dota_hero_broodmother",
+  "items": [
+   101,
+   102,
+   103
+  ],
+  "slots": [
+   "head",
+   "legs",
+   "back"
+  ]
+ },
+ "models/heroes/centaur/": {
+  "hero": "npc_dota_hero_centaur",
+  "items": [
+   358,
+   359,
+   360,
+   361,
+   362,
+   363,
+   364
+  ],
+  "slots": [
+   "",
+   "head",
+   "shoulder",
+   "belt",
+   "back",
+   "arms",
+   "tail"
+  ]
+ },
+ "models/heroes/chaos_knight/": {
+  "hero": "npc_dota_hero_chaos_knight",
+  "items": [
+   181,
+   183,
+   184,
+   185,
+   186
+  ],
+  "slots": [
+   "mount",
+   "shoulder",
+   "head",
+   "",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/chen/": {
+  "hero": "npc_dota_hero_chen",
+  "items": [
+   220,
+   221,
+   222,
+   223,
+   224
+  ],
+  "slots": [
+   "",
+   "mount",
+   "head",
+   "arms",
+   "shoulder"
+  ]
+ },
+ "models/heroes/clinkz/": {
+  "hero": "npc_dota_hero_clinkz",
+  "items": [
+   56,
+   57,
+   58,
+   59,
+   60,
+   61
+  ],
+  "slots": [
+   "body_head",
+   "",
+   "shoulder",
+   "back",
+   "head",
+   "gloves"
+  ]
+ },
+ "models/heroes/crystal_maiden/": {
+  "hero": "npc_dota_hero_crystal_maiden",
+  "items": [
+   38,
+   39,
+   40,
+   41,
+   311
+  ],
+  "slots": [
+   "back",
+   "shoulder",
+   "",
+   "arms",
+   "head"
+  ]
+ },
+ "models/heroes/dark_seer/": {
+  "hero": "npc_dota_hero_dark_seer",
+  "items": [
+   348,
+   349,
+   350,
+   351,
+   352
+  ],
+  "slots": [
+   "back",
+   "head",
+   "arms",
+   "belt",
+   "shoulder"
+  ]
+ },
+ "models/heroes/dark_willow/": {
+  "hero": "npc_dota_hero_dark_willow",
+  "items": [
+   640,
+   641,
+   642,
+   646,
+   651
+  ],
+  "slots": [
+   "head",
+   "offhand_weapon",
+   "armor",
+   "back",
+   "belt"
+  ]
+ },
+ "models/heroes/dawnbreaker/": {
+  "hero": "npc_dota_hero_dawnbreaker",
+  "items": [
+   755,
+   756,
+   757,
+   758
+  ],
+  "slots": [
+   "head",
+   "arms",
+   "armor",
+   ""
+  ]
+ },
+ "models/heroes/dazzle/": {
+  "hero": "npc_dota_hero_dazzle",
+  "items": [
+   263,
+   264,
+   265,
+   266
+  ],
+  "slots": [
+   "back",
+   "",
+   "legs",
+   "arms"
+  ]
+ },
+ "models/heroes/death_prophet/": {
+  "hero": "npc_dota_hero_death_prophet",
+  "items": [
+   168,
+   169,
+   170,
+   171
+  ],
+  "slots": [
+   "legs",
+   "head",
+   "armor",
+   "belt"
+  ]
+ },
+ "models/heroes/disruptor/": {
+  "hero": "npc_dota_hero_disruptor",
+  "items": [
+   142,
+   143,
+   144,
+   145,
+   146,
+   147
+  ],
+  "slots": [
+   "",
+   "arms",
+   "head",
+   "back",
+   "shoulder",
+   "legs"
+  ]
+ },
+ "models/heroes/doom/": {
+  "hero": "npc_dota_hero_doom_bringer",
+  "items": [
+   232,
+   233,
+   234,
+   235,
+   236,
+   237,
+   238
+  ],
+  "slots": [
+   "",
+   "head",
+   "shoulder",
+   "arms",
+   "belt",
+   "back",
+   "tail"
+  ]
+ },
+ "models/heroes/dragon_knight/": {
+  "hero": "npc_dota_hero_dragon_knight",
+  "items": [
+   63,
+   64,
+   65,
+   66,
+   67,
+   68
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "arms",
+   "",
+   "offhand_weapon",
+   "back"
+  ]
+ },
+ "models/heroes/drow/": {
+  "hero": "npc_dota_hero_drow_ranger",
+  "items": [
+   75,
+   76,
+   77,
+   78,
+   80,
+   267
+  ],
+  "slots": [
+   "arms",
+   "back",
+   "",
+   "legs",
+   "shoulder",
+   "head"
+  ]
+ },
+ "models/heroes/earth_spirit/": {
+  "hero": "npc_dota_hero_earth_spirit",
+  "items": [
+   475,
+   477,
+   479,
+   480,
+   481,
+   482
+  ],
+  "slots": [
+   "",
+   "head",
+   "belt",
+   "neck",
+   "arms",
+   "body_head"
+  ]
+ },
+ "models/heroes/earthshaker/": {
+  "hero": "npc_dota_hero_earthshaker",
+  "items": [
+   459,
+   460,
+   461
+  ],
+  "slots": [
+   "",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/elder_titan/": {
+  "hero": "npc_dota_hero_elder_titan",
+  "items": [
+   426,
+   427,
+   428,
+   429,
+   430
+  ],
+  "slots": [
+   "",
+   "arms",
+   "head",
+   "shoulder",
+   "back"
+  ]
+ },
+ "models/heroes/ember_spirit/": {
+  "hero": "npc_dota_hero_ember_spirit",
+  "items": [
+   462,
+   469,
+   471,
+   472,
+   473,
+   474
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "belt",
+   "",
+   "offhand_weapon",
+   "arms"
+  ]
+ },
+ "models/heroes/enchantress/": {
+  "hero": "npc_dota_hero_enchantress",
+  "items": [
+   286,
+   287,
+   288,
+   289,
+   290
+  ],
+  "slots": [
+   "neck",
+   "head",
+   "belt",
+   "arms",
+   ""
+  ]
+ },
+ "models/heroes/faceless_void/": {
+  "hero": "npc_dota_hero_faceless_void",
+  "items": [
+   15,
+   90,
+   91,
+   92,
+   93
+  ],
+  "slots": [
+   "",
+   "body_head",
+   "shoulder",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/furion/": {
+  "hero": "npc_dota_hero_furion",
+  "items": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   49
+  ],
+  "slots": [
+   "",
+   "head",
+   "neck",
+   "back",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/grimstroke/": {
+  "hero": "npc_dota_hero_grimstroke",
+  "items": [
+   664,
+   666,
+   667,
+   668
+  ],
+  "slots": [
+   "belt",
+   "",
+   "head",
+   "armor"
+  ]
+ },
+ "models/heroes/gyro/": {
+  "hero": "npc_dota_hero_gyrocopter",
+  "items": [
+   126,
+   131,
+   176,
+   177,
+   179
+  ],
+  "slots": [
+   "back",
+   "body_head",
+   "head",
+   "",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/hoodwink/": {
+  "hero": "npc_dota_hero_hoodwink",
+  "items": [
+   749,
+   750,
+   751,
+   752
+  ],
+  "slots": [
+   "back",
+   "armor",
+   "tail",
+   ""
+  ]
+ },
+ "models/heroes/huskar/": {
+  "hero": "npc_dota_hero_huskar",
+  "items": [
+   268,
+   269,
+   270,
+   271,
+   272
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "head",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/invoker/": {
+  "hero": "npc_dota_hero_invoker",
+  "items": [
+   48,
+   89,
+   98,
+   99,
+   100,
+   305
+  ],
+  "slots": [
+   "back",
+   "shoulder",
+   "body_head",
+   "head",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/jakiro/": {
+  "hero": "npc_dota_hero_jakiro",
+  "items": [
+   635
+  ],
+  "slots": [
+   "back"
+  ]
+ },
+ "models/heroes/juggernaut/": {
+  "hero": "npc_dota_hero_juggernaut",
+  "items": [
+   6,
+   7,
+   8,
+   9,
+   62
+  ],
+  "slots": [
+   "head",
+   "",
+   "back",
+   "arms",
+   "legs"
+  ]
+ },
+ "models/heroes/keeper_of_the_light/": {
+  "hero": "npc_dota_hero_keeper_of_the_light",
+  "items": [
+   252,
+   253,
+   254,
+   255,
+   256
+  ],
+  "slots": [
+   "mount",
+   "",
+   "head",
+   "belt",
+   "armor"
+  ]
+ },
+ "models/heroes/kez/": {
+  "hero": "npc_dota_hero_kez",
+  "items": [
+   818,
+   819,
+   820,
+   821,
+   829
+  ],
+  "slots": [
+   "",
+   "head",
+   "shoulder",
+   "belt",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/kunkka/": {
+  "hero": "npc_dota_hero_kunkka",
+  "items": [
+   10,
+   11,
+   12,
+   14,
+   81,
+   357
+  ],
+  "slots": [
+   "legs",
+   "gloves",
+   "",
+   "head",
+   "belt",
+   "shoulder"
+  ]
+ },
+ "models/heroes/lanaya/": {
+  "hero": "npc_dota_hero_templar_assassin",
+  "items": [
+   173,
+   174,
+   175
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "armor"
+  ]
+ },
+ "models/heroes/legion_commander/": {
+  "hero": "npc_dota_hero_legion_commander",
+  "items": [
+   431,
+   432,
+   433,
+   434,
+   435
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "back",
+   "",
+   "arms"
+  ]
+ },
+ "models/heroes/leshrac/": {
+  "hero": "npc_dota_hero_leshrac",
+  "items": [
+   345,
+   346,
+   347
+  ],
+  "slots": [
+   "back",
+   "head",
+   "tail"
+  ]
+ },
+ "models/heroes/lich/": {
+  "hero": "npc_dota_hero_lich",
+  "items": [
+   331,
+   332,
+   333,
+   334
+  ],
+  "slots": [
+   "belt",
+   "neck",
+   "arms",
+   "back"
+  ]
+ },
+ "models/heroes/life_stealer/": {
+  "hero": "npc_dota_hero_life_stealer",
+  "items": [
+   443,
+   444
+  ],
+  "slots": [
+   "belt",
+   "arms"
+  ]
+ },
+ "models/heroes/lina/": {
+  "hero": "npc_dota_hero_lina",
+  "items": [
+   318,
+   319,
+   320,
+   321
+  ],
+  "slots": [
+   "neck",
+   "head",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/lion/": {
+  "hero": "npc_dota_hero_lion",
+  "items": [
+   365,
+   366,
+   368,
+   369
+  ],
+  "slots": [
+   "",
+   "back",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/lone_druid/": {
+  "hero": "npc_dota_hero_lone_druid",
+  "items": [
+   107,
+   108,
+   109,
+   110,
+   219
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "arms",
+   "back",
+   ""
+  ]
+ },
+ "models/heroes/luna/": {
+  "hero": "npc_dota_hero_luna",
+  "items": [
+   448,
+   449,
+   450,
+   451,
+   452,
+   453
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "head",
+   "shoulder",
+   "mount",
+   "body_head"
+  ]
+ },
+ "models/heroes/lycan/": {
+  "hero": "npc_dota_hero_lycan",
+  "items": [
+   206,
+   207,
+   208,
+   209,
+   210
+  ],
+  "slots": [
+   "",
+   "body_head",
+   "armor",
+   "shoulder",
+   "belt"
+  ]
+ },
+ "models/heroes/magnataur/": {
+  "hero": "npc_dota_hero_magnataur",
+  "items": [
+   326,
+   328,
+   329,
+   330
+  ],
+  "slots": [
+   "head",
+   "arms",
+   "belt",
+   ""
+  ]
+ },
+ "models/heroes/marci/": {
+  "hero": "npc_dota_hero_marci",
+  "items": [
+   777,
+   778,
+   779,
+   780
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "back",
+   "shoulder"
+  ]
+ },
+ "models/heroes/mars/": {
+  "hero": "npc_dota_hero_mars",
+  "items": [
+   658,
+   670,
+   671,
+   672
+  ],
+  "slots": [
+   "",
+   "armor",
+   "legs",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/medusa/": {
+  "hero": "npc_dota_hero_medusa",
+  "items": [
+   381,
+   382,
+   383,
+   384,
+   385
+  ],
+  "slots": [
+   "",
+   "head",
+   "armor",
+   "arms",
+   "tail"
+  ]
+ },
+ "models/heroes/meepo/": {
+  "hero": "npc_dota_hero_meepo",
+  "items": [
+   104,
+   296,
+   297,
+   298,
+   299,
+   300
+  ],
+  "slots": [
+   "",
+   "head",
+   "back",
+   "shoulder",
+   "arms",
+   "tail"
+  ]
+ },
+ "models/heroes/mirana/": {
+  "hero": "npc_dota_hero_mirana",
+  "items": [
+   403,
+   404,
+   405,
+   406,
+   407,
+   408
+  ],
+  "slots": [
+   "",
+   "mount",
+   "head",
+   "back",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/monkey_king/": {
+  "hero": "npc_dota_hero_monkey_king",
+  "items": [
+   594,
+   608,
+   609,
+   657
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "",
+   "shoulder"
+  ]
+ },
+ "models/heroes/muerta/": {
+  "hero": "npc_dota_hero_muerta",
+  "items": [
+   804,
+   807,
+   808,
+   809
+  ],
+  "slots": [
+   "",
+   "head",
+   "back",
+   "armor"
+  ]
+ },
+ "models/heroes/necrolyte/": {
+  "hero": "npc_dota_hero_necrolyte",
+  "items": [
+   211,
+   212,
+   213,
+   214,
+   659
+  ],
+  "slots": [
+   "",
+   "body_head",
+   "head",
+   "shoulder",
+   "legs"
+  ]
+ },
+ "models/heroes/nerubian_assassin/": {
+  "hero": "npc_dota_hero_nyx_assassin",
+  "items": [
+   195,
+   196,
+   197
+  ],
+  "slots": [
+   "",
+   "back",
+   "head"
+  ]
+ },
+ "models/heroes/nightstalker/": {
+  "hero": "npc_dota_hero_night_stalker",
+  "items": [
+   337,
+   338,
+   339
+  ],
+  "slots": [
+   "back",
+   "legs",
+   "tail"
+  ]
+ },
+ "models/heroes/obsidian_destroyer/": {
+  "hero": "npc_dota_hero_obsidian_destroyer",
+  "items": [
+   187,
+   188,
+   189,
+   190,
+   226
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "",
+   "back",
+   "body_head"
+  ]
+ },
+ "models/heroes/ogre_magi/": {
+  "hero": "npc_dota_hero_ogre_magi",
+  "items": [
+   105,
+   133,
+   134,
+   135,
+   136
+  ],
+  "slots": [
+   "",
+   "back",
+   "arms",
+   "head",
+   "belt"
+  ]
+ },
+ "models/heroes/omniknight/": {
+  "hero": "npc_dota_hero_omniknight",
+  "items": [
+   13,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "slots": [
+   "arms",
+   "shoulder",
+   "back",
+   "",
+   "body_head",
+   "head"
+  ]
+ },
+ "models/heroes/oracle/": {
+  "hero": "npc_dota_hero_oracle",
+  "items": [
+   546,
+   547,
+   548,
+   549
+  ],
+  "slots": [
+   "armor",
+   "back",
+   "head",
+   ""
+  ]
+ },
+ "models/heroes/pangolier/": {
+  "hero": "npc_dota_hero_pangolier",
+  "items": [
+   643,
+   644,
+   645
+  ],
+  "slots": [
+   "",
+   "armor",
+   "head"
+  ]
+ },
+ "models/heroes/phantom_assassin/": {
+  "hero": "npc_dota_hero_phantom_assassin",
+  "items": [
+   137,
+   138,
+   139,
+   140,
+   141
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "back",
+   "",
+   "belt"
+  ]
+ },
+ "models/heroes/phantom_lancer/": {
+  "hero": "npc_dota_hero_phantom_lancer",
+  "items": [
+   127,
+   128,
+   129,
+   130,
+   132
+  ],
+  "slots": [
+   "body_head",
+   "belt",
+   "arms",
+   "shoulder",
+   ""
+  ]
+ },
+ "models/heroes/phoenix/": {
+  "hero": "npc_dota_hero_phoenix",
+  "items": [
+   592,
+   626
+  ],
+  "slots": [
+   "head",
+   "back"
+  ]
+ },
+ "models/heroes/primal_beast/": {
+  "hero": "npc_dota_hero_primal_beast",
+  "items": [
+   769,
+   770,
+   771
+  ],
+  "slots": [
+   "arms",
+   "back",
+   "legs"
+  ]
+ },
+ "models/heroes/puck/": {
+  "hero": "npc_dota_hero_puck",
+  "items": [
+   370,
+   371,
+   372
+  ],
+  "slots": [
+   "back",
+   "tail",
+   "head"
+  ]
+ },
+ "models/heroes/pudge/": {
+  "hero": "npc_dota_hero_pudge",
+  "items": [
+   47,
+   258,
+   259,
+   260,
+   261,
+   262,
+   470
+  ],
+  "slots": [
+   "",
+   "back",
+   "offhand_weapon",
+   "shoulder",
+   "arms",
+   "head",
+   "belt"
+  ]
+ },
+ "models/heroes/pugna/": {
+  "hero": "npc_dota_hero_pugna",
+  "items": [
+   153,
+   154,
+   155,
+   156,
+   157,
+   167
+  ],
+  "slots": [
+   "head",
+   "back",
+   "arms",
+   "",
+   "belt",
+   "shoulder"
+  ]
+ },
+ "models/heroes/queenofpain/": {
+  "hero": "npc_dota_hero_queenofpain",
+  "items": [
+   26,
+   82,
+   83,
+   84,
+   781
+  ],
+  "slots": [
+   "",
+   "back",
+   "shoulder",
+   "head",
+   "legs"
+  ]
+ },
+ "models/heroes/rattletrap/": {
+  "hero": "npc_dota_hero_rattletrap",
+  "items": [
+   446,
+   484,
+   485
+  ],
+  "slots": [
+   "",
+   "armor",
+   "head"
+  ]
+ },
+ "models/heroes/razor/": {
+  "hero": "npc_dota_hero_razor",
+  "items": [
+   340,
+   341,
+   342,
+   343,
+   344
+  ],
+  "slots": [
+   "",
+   "head",
+   "armor",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/rikimaru/": {
+  "hero": "npc_dota_hero_riki",
+  "items": [
+   163,
+   164,
+   165,
+   166,
+   322,
+   561
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "tail",
+   "arms",
+   "offhand_weapon",
+   ""
+  ]
+ },
+ "models/heroes/ringmaster/": {
+  "hero": "npc_dota_hero_ringmaster",
+  "items": [
+   812,
+   813,
+   814,
+   815
+  ],
+  "slots": [
+   "",
+   "head",
+   "belt",
+   "armor"
+  ]
+ },
+ "models/heroes/rubick/": {
+  "hero": "npc_dota_hero_rubick",
+  "items": [
+   203,
+   204,
+   205,
+   419
+  ],
+  "slots": [
+   "",
+   "back",
+   "shoulder",
+   "head"
+  ]
+ },
+ "models/heroes/sand_king/": {
+  "hero": "npc_dota_hero_sand_king",
+  "items": [
+   180,
+   198,
+   199,
+   200,
+   201
+  ],
+  "slots": [
+   "body_head",
+   "shoulder",
+   "arms",
+   "legs",
+   "back"
+  ]
+ },
+ "models/heroes/shadow_demon/": {
+  "hero": "npc_dota_hero_shadow_demon",
+  "items": [
+   396,
+   397,
+   398,
+   399
+  ],
+  "slots": [
+   "back",
+   "armor",
+   "belt",
+   "tail"
+  ]
+ },
+ "models/heroes/shadow_fiend/": {
+  "hero": "npc_dota_hero_nevermore",
+  "items": [
+   387,
+   486,
+   488
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/shadowshaman/": {
+  "hero": "npc_dota_hero_shadow_shaman",
+  "items": [
+   246,
+   247,
+   248,
+   249,
+   250,
+   251
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "head",
+   "arms",
+   "belt",
+   "body_head"
+  ]
+ },
+ "models/heroes/shredder/": {
+  "hero": "npc_dota_hero_shredder",
+  "items": [
+   386,
+   388,
+   389,
+   390,
+   400,
+   401,
+   402
+  ],
+  "slots": [
+   "head",
+   "offhand_weapon",
+   "shoulder",
+   "back",
+   "belt",
+   "armor",
+   ""
+  ]
+ },
+ "models/heroes/silencer/": {
+  "hero": "npc_dota_hero_silencer",
+  "items": [
+   27,
+   28,
+   301,
+   302,
+   303,
+   304
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "arms",
+   "head",
+   "shoulder",
+   "belt"
+  ]
+ },
+ "models/heroes/siren/": {
+  "hero": "npc_dota_hero_naga_siren",
+  "items": [
+   191,
+   192,
+   193,
+   194,
+   312
+  ],
+  "slots": [
+   "head",
+   "",
+   "legs",
+   "armor",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/skywrath_mage/": {
+  "hero": "npc_dota_hero_skywrath_mage",
+  "items": [
+   420,
+   421,
+   422,
+   423,
+   424,
+   425
+  ],
+  "slots": [
+   "",
+   "head",
+   "back",
+   "belt",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/slardar/": {
+  "hero": "npc_dota_hero_slardar",
+  "items": [
+   273,
+   274,
+   276
+  ],
+  "slots": [
+   "",
+   "back",
+   "arms"
+  ]
+ },
+ "models/heroes/slark/": {
+  "hero": "npc_dota_hero_slark",
+  "items": [
+   336,
+   353,
+   354,
+   355,
+   356
+  ],
+  "slots": [
+   "",
+   "arms",
+   "shoulder",
+   "back",
+   "head"
+  ]
+ },
+ "models/heroes/snapfire/": {
+  "hero": "npc_dota_hero_snapfire",
+  "items": [
+   691,
+   692,
+   693,
+   694,
+   695
+  ],
+  "slots": [
+   "head",
+   "costume",
+   "armor",
+   "mount",
+   ""
+  ]
+ },
+ "models/heroes/sniper/": {
+  "hero": "npc_dota_hero_sniper",
+  "items": [
+   281,
+   282,
+   283,
+   284,
+   285
+  ],
+  "slots": [
+   "",
+   "back",
+   "head",
+   "shoulder",
+   "arms"
+  ]
+ },
+ "models/heroes/spectre/": {
+  "hero": "npc_dota_hero_spectre",
+  "items": [
+   323,
+   324,
+   325,
+   395
+  ],
+  "slots": [
+   "head",
+   "belt",
+   "shoulder",
+   ""
+  ]
+ },
+ "models/heroes/spirit_breaker/": {
+  "hero": "npc_dota_hero_spirit_breaker",
+  "items": [
+   106,
+   111,
+   112,
+   113,
+   114,
+   115,
+   116
+  ],
+  "slots": [
+   "body_head",
+   "head",
+   "shoulder",
+   "",
+   "tail",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/storm_spirit/": {
+  "hero": "npc_dota_hero_storm_spirit",
+  "items": [
+   308,
+   309,
+   310
+  ],
+  "slots": [
+   "head",
+   "arms",
+   "armor"
+  ]
+ },
+ "models/heroes/sven/": {
+  "hero": "npc_dota_hero_sven",
+  "items": [
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "slots": [
+   "head",
+   "",
+   "belt",
+   "arms",
+   "shoulder"
+  ]
+ },
+ "models/heroes/techies/": {
+  "hero": "npc_dota_hero_techies",
+  "items": [
+   487,
+   489,
+   490,
+   491,
+   492
+  ],
+  "slots": [
+   "back",
+   "",
+   "mount",
+   "head",
+   "shoulder"
+  ]
+ },
+ "models/heroes/terrorblade/": {
+  "hero": "npc_dota_hero_terrorblade",
+  "items": [
+   306,
+   307,
+   476,
+   478
+  ],
+  "slots": [
+   "back",
+   "",
+   "armor",
+   "head"
+  ]
+ },
+ "models/heroes/tidehunter/": {
+  "hero": "npc_dota_hero_tidehunter",
+  "items": [
+   34,
+   35,
+   36,
+   37
+  ],
+  "slots": [
+   "arms",
+   "belt",
+   "",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/tinker/": {
+  "hero": "npc_dota_hero_tinker",
+  "items": [
+   367,
+   463,
+   464,
+   465,
+   466,
+   467
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "shoulder",
+   "head",
+   "body_head",
+   "back"
+  ]
+ },
+ "models/heroes/tiny/tiny_tree/": {
+  "hero": "npc_dota_hero_tiny",
+  "items": [
+   493,
+   494,
+   495,
+   496,
+   497
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "arms",
+   "offhand_weapon",
+   ""
+  ]
+ },
+ "models/heroes/tiny_01/": {
+  "hero": "npc_dota_hero_tiny",
+  "items": [
+   493,
+   494,
+   495,
+   496,
+   497
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "arms",
+   "offhand_weapon",
+   ""
+  ]
+ },
+ "models/heroes/treant_protector/": {
+  "hero": "npc_dota_hero_treant",
+  "items": [
+   227,
+   228,
+   229,
+   230
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "arms",
+   "legs"
+  ]
+ },
+ "models/heroes/troll_warlord/": {
+  "hero": "npc_dota_hero_troll_warlord",
+  "items": [
+   373,
+   374,
+   379,
+   380,
+   410,
+   411,
+   412
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "weapon2",
+   "offhand_weapon2",
+   "shoulder",
+   "head",
+   "armor"
+  ]
+ },
+ "models/heroes/troll_warlord/mesh/": {
+  "hero": "npc_dota_hero_troll_warlord",
+  "items": [
+   373,
+   374,
+   379,
+   380,
+   410,
+   411,
+   412
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "weapon2",
+   "offhand_weapon2",
+   "shoulder",
+   "head",
+   "armor"
+  ]
+ },
+ "models/heroes/tuskarr/": {
+  "hero": "npc_dota_hero_tusk",
+  "items": [
+   413,
+   414,
+   415,
+   416,
+   417,
+   418
+  ],
+  "slots": [
+   "arms",
+   "shoulder",
+   "head",
+   "neck",
+   "",
+   "back"
+  ]
+ },
+ "models/heroes/undying/": {
+  "hero": "npc_dota_hero_undying",
+  "items": [
+   392,
+   393,
+   616
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "arms"
+  ]
+ },
+ "models/heroes/undying/mesh/": {
+  "hero": "npc_dota_hero_undying",
+  "items": [
+   392,
+   393,
+   616
+  ],
+  "slots": [
+   "head",
+   "armor",
+   "arms"
+  ]
+ },
+ "models/heroes/ursa/": {
+  "hero": "npc_dota_hero_ursa",
+  "items": [
+   85,
+   86,
+   87,
+   88
+  ],
+  "slots": [
+   "head",
+   "back",
+   "arms",
+   "belt"
+  ]
+ },
+ "models/heroes/vengeful/": {
+  "hero": "npc_dota_hero_vengefulspirit",
+  "items": [
+   441,
+   442,
+   445,
+   447
+  ],
+  "slots": [
+   "head",
+   "",
+   "shoulder",
+   "legs"
+  ]
+ },
+ "models/heroes/venomancer/": {
+  "hero": "npc_dota_hero_venomancer",
+  "items": [
+   291,
+   292,
+   293,
+   294
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "arms",
+   "tail"
+  ]
+ },
+ "models/heroes/viper/": {
+  "hero": "npc_dota_hero_viper",
+  "items": [
+   611
+  ],
+  "slots": [
+   "back"
+  ]
+ },
+ "models/heroes/visage/": {
+  "hero": "npc_dota_hero_visage",
+  "items": [
+   624,
+   625
+  ],
+  "slots": [
+   "head",
+   "armor"
+  ]
+ },
+ "models/heroes/void_spirit/": {
+  "hero": "npc_dota_hero_void_spirit",
+  "items": [
+   686,
+   687,
+   688,
+   689
+  ],
+  "slots": [
+   "",
+   "head",
+   "armor",
+   "belt"
+  ]
+ },
+ "models/heroes/warlock/": {
+  "hero": "npc_dota_hero_warlock",
+  "items": [
+   239,
+   240,
+   241,
+   242,
+   243,
+   244,
+   245
+  ],
+  "slots": [
+   "",
+   "offhand_weapon",
+   "head",
+   "shoulder",
+   "arms",
+   "back",
+   "belt"
+  ]
+ },
+ "models/heroes/weaver/": {
+  "hero": "npc_dota_hero_weaver",
+  "items": [
+   277,
+   278,
+   279,
+   280
+  ],
+  "slots": [
+   "head",
+   "legs",
+   "arms",
+   "back"
+  ]
+ },
+ "models/heroes/windrunner/": {
+  "hero": "npc_dota_hero_windrunner",
+  "items": [
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "slots": [
+   "head",
+   "",
+   "shoulder",
+   "back",
+   "offhand_weapon"
+  ]
+ },
+ "models/heroes/winterwyvern/": {
+  "hero": "npc_dota_hero_winter_wyvern",
+  "items": [
+   551,
+   552
+  ],
+  "slots": [
+   "head",
+   "back"
+  ]
+ },
+ "models/heroes/witchdoctor/": {
+  "hero": "npc_dota_hero_witch_doctor",
+  "items": [
+   94,
+   95,
+   96,
+   97
+  ],
+  "slots": [
+   "head",
+   "shoulder",
+   "belt",
+   ""
+  ]
+ },
+ "models/heroes/wraith_king/": {
+  "hero": "npc_dota_hero_skeleton_king",
+  "items": [
+   148,
+   149,
+   150,
+   151,
+   152,
+   500
+  ],
+  "slots": [
+   "head",
+   "",
+   "shoulder",
+   "arms",
+   "back",
+   "armor"
+  ]
+ },
+ "models/heroes/zeus/": {
+  "hero": "npc_dota_hero_zuus",
+  "items": [
+   589,
+   604,
+   606,
+   607
+  ],
+  "slots": [
+   "arms",
+   "head",
+   "belt",
+   "back"
+  ]
+ }
+}

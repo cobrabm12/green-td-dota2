@@ -1,0 +1,241 @@
+.GtdRoot {
+	width: 100%;
+	height: 100%;
+	font-family: defaultFont;
+}
+
+.Hidden {
+	visibility: collapse;
+}
+
+/* ---------------- top bar */
+#TopBar {
+	horizontal-align: center;
+	margin-top: 64px;
+	flow-children: right;
+	background-color: #000000b0;
+	border-radius: 6px;
+	padding: 6px 16px;
+}
+
+#TopBar Label {
+	font-size: 20px;
+	color: #e0e0e0;
+	margin: 0px 10px;
+	vertical-align: center;
+}
+
+#WaveLabel { color: #7fff7f; font-weight: bold; }
+#WaveKind { color: #7fbfff; }
+#TimerLabel { color: #ffd34d; }
+#ChancesLabel { color: #ff6060; font-weight: bold; }
+
+/* ---------------- board */
+#Board {
+	horizontal-align: right;
+	margin-top: 120px;
+	margin-right: 12px;
+	width: 300px;
+	flow-children: down;
+	background-color: #000000b0;
+	border-radius: 6px;
+	padding: 8px;
+}
+
+.BoardTitle {
+	color: #00ff00;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+#BoardPlayers {
+	width: 100%;
+	flow-children: down;
+}
+
+.BoardRow {
+	width: 100%;
+	flow-children: right;
+}
+
+.BoardRow.Left .BoardName {
+	opacity: 0.4;
+}
+
+.BoardName {
+	width: fill-parent-flow(1);
+	font-size: 16px;
+	color: #ffffff;
+	text-overflow: ellipsis;
+}
+
+.BoardValue {
+	font-size: 16px;
+	color: #ffd34d;
+	text-align: right;
+}
+
+/* ---------------- messages */
+#Messages {
+	horizontal-align: center;
+	margin-top: 180px;
+	flow-children: down;
+	width: 900px;
+}
+
+.Message {
+	horizontal-align: center;
+	font-size: 22px;
+	text-shadow: 2px 2px 4px #000000;
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 0.9s;
+}
+
+.Message.Fade {
+	opacity: 0;
+}
+
+/* ---------------- gold */
+#RightColumn {
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-right: 12px;
+	margin-bottom: 70px;
+	flow-children: down;
+}
+
+#GoldBox {
+	horizontal-align: right;
+	margin-bottom: 4px;
+	flow-children: right;
+	background-color: #000000c0;
+	border-radius: 6px;
+	padding: 6px 14px;
+}
+
+.GoldIcon {
+	width: 24px;
+	height: 24px;
+	background-image: url("s2r://panorama/images/hud/reborn/gold_small_psd.vtex");
+	background-size: 100%;
+	vertical-align: center;
+	margin-right: 8px;
+}
+
+#GoldLabel {
+	font-size: 22px;
+	color: #ffd700;
+	font-weight: bold;
+}
+
+/* ---------------- panels */
+#BuildMenu {
+	width: 300px;
+	flow-children: down;
+	background-color: #000000c8;
+	border-radius: 6px;
+	padding: 8px;
+}
+
+#TowerPanel {
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-right: 12px;
+	width: 300px;
+	flow-children: down;
+	background-color: #000000c8;
+	border-radius: 6px;
+	padding: 8px;
+}
+
+#TowerPanel {
+	margin-right: 324px;
+	margin-bottom: 160px;
+	width: 360px;
+}
+
+.PanelTitle {
+	font-size: 18px;
+	color: #7fff7f;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+#TowerDesc {
+	font-size: 14px;
+	color: #c0c0c0;
+	margin-bottom: 4px;
+}
+
+#TowerStats {
+	font-size: 14px;
+	color: #e0e0e0;
+	margin-bottom: 6px;
+}
+
+#BuildButtons, #UpgradeButtons {
+	width: 100%;
+	flow-children: down;
+}
+
+.GtdButton {
+	width: 100%;
+	padding: 4px 8px;
+	margin-bottom: 3px;
+	background-color: #2a3a2a;
+	border: 1px solid #4a6a4a;
+	border-radius: 3px;
+	flow-children: right;
+}
+
+.GtdButton:hover {
+	background-color: #3d5a3d;
+	border: 1px solid #7fff7f;
+}
+
+.GtdButton:disabled {
+	opacity: 0.5;
+}
+
+.GtdButton Label {
+	font-size: 15px;
+	color: #ffffff;
+}
+
+.GtdButton.TooExpensive Label {
+	color: #ff8080;
+}
+
+.BuildName {
+	width: fill-parent-flow(1);
+	text-overflow: ellipsis;
+}
+
+.BuildCost {
+	color: #ffd700;
+}
+
+.SellButton {
+	background-color: #4a3a1a;
+	border: 1px solid #8a6a2a;
+	margin-top: 4px;
+}
+
+.SellButton Label {
+	color: #ffd700;
+}
+
+.HotkeyLabel {
+	min-width: 18px;
+	margin-right: 6px;
+	padding: 0px 3px;
+	background-color: #00000080;
+	border: 1px solid #8a7a3a;
+	border-radius: 2px;
+	color: #ffd34d;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+}
