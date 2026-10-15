@@ -1,5 +1,7 @@
 -- Build grid taken from the WC3 pathing map (war3map.wpm): 32x32 cells.
 --   b = buildable, w = walkable but not buildable (creep paths), x = blocked
+-- The creep paths run one cliff level below the build zones (tools/gen.py, terrain); build cells on the lower
+-- half of a cliff slope cannot be built on (Grid:MarkCliffs).
 GTD.Grid = GTD.Grid or {}
 local Grid = GTD.Grid
 
@@ -17,6 +19,7 @@ function Grid:Init()
 	end
 	self.occupied = {}
 	print("[GTD] doodad cells blocked for building: " .. self:MarkDoodads())
+	print("[GTD] cliff cells blocked for building: " .. self:MarkCliffs())
 end
 
 function Grid:Kind(cx, cy)
@@ -60,7 +63,7 @@ end
 function Grid:CanBuild(center, size)
 	for _, c in ipairs(self:Cells(center, size)) do
 		local key = c[2] * self.w + c[1]
-		if self:Kind(c[1], c[2]) ~= "b" or self.occupied[key] or self.doodads[key] then
+		if self:Kind(c[1], c[2]) ~= "b" or self.occupied[key] or self.doodads[key] or self.cliffs[key] then
 			return false
 		end
 	end
@@ -79,6 +82,30 @@ function Grid:MarkDoodads()
 			for dy = 0, h - 1 do
 				for dx = 0, w - 1 do
 					self.doodads[(y0 + dy) * self.w + (x0 + dx)] = true
+					count = count + 1
+				end
+			end
+		end
+	end
+	return count
+end
+
+-- Towers may stand on the upper half of a slope (at the edge of the cliff) or down on the path level,
+-- not on the steep part in between.
+Grid.CLIFF_LEVEL = 128
+function Grid:MarkCliffs()
+	self.cliffs = {}
+	local finish = GTD.Data.map.rects[GTD.Data.map.end_region]   -- END is on the path level
+	local low = GetGroundHeight(Vector((finish.min[1] + finish.max[1]) / 2, (finish.min[2] + finish.max[2]) / 2, 0), nil)
+	local count = 0
+	for cy = 0, self.h - 1 do
+		local row = self.rows[cy]
+		local y = self.oy + (cy + 0.5) * self.cell
+		for cx = 0, self.w - 1 do
+			if row:byte(cx + 1) == 98 then   -- "b"
+				local z = GetGroundHeight(Vector(self.ox + (cx + 0.5) * self.cell, y, 0), nil) - low
+				if z > 8 and z < self.CLIFF_LEVEL / 2 then
+					self.cliffs[cy * self.w + cx] = true
 					count = count + 1
 				end
 			end

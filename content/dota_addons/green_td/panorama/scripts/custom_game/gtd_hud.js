@@ -401,6 +401,16 @@ function OnMeasureFps(data) {
 	$.Schedule(0, tick);
 }
 
+// Developer (gtd_hud 0|1): hide the whole interface for clean screenshots (Workshop preview image).
+function OnHudVisible(data) {
+	var show = !!data.visible;
+	$.GetContextPanel().visible = show;
+	var root = $.GetContextPanel();
+	while (root.GetParent()) { root = root.GetParent(); }
+	var hud = root.FindChildTraverse("HUDElements");
+	if (hud) { hud.visible = show; }
+}
+
 // ---------------------------------------------------------------- init
 (function () {
 	var ui = DotaDefaultUIElement_t;
@@ -424,6 +434,7 @@ function OnMeasureFps(data) {
 	GameEvents.Subscribe("gtd_measure_fps", OnMeasureFps);
 	GameEvents.Subscribe("gtd_sound_check", OnSoundCheck);
 	GameEvents.Subscribe("gtd_key_scan", OnKeyScan);
+	GameEvents.Subscribe("gtd_hud_visible", OnHudVisible);
 	GameEvents.Subscribe("dota_player_update_selected_unit", OnSelectionChanged);
 	GameEvents.Subscribe("dota_player_update_query_unit", OnSelectionChanged);
 	UpdateGame();

@@ -20,6 +20,7 @@
 		"Ability17"				""
 		"AbilityLayout"			"1"
 		"AttackCapabilities"	"DOTA_UNIT_CAP_NO_ATTACK"
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"			"522"
 		"MovementTurnRate"		"1.0"
 		"StatusHealth"			"500"

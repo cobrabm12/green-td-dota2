@@ -22,7 +22,7 @@ game/dota_addons/green_td/       -> legat (junction) în dota 2 beta/game/dota_a
   scripts/vscripts/gtd/data/     date generate din harta WC3 (nu se editează de mână)
   scripts/vscripts/modifiers/    atacul turnurilor, creepi, otravă, frost, fire trap
 content/dota_addons/green_td/    -> legat în dota 2 beta/content/dota_addons/green_td
-  maps/green_td.vmap             harta (copie a hărții-șablon plate, 16384 x 16384)
+  maps/green_td.vmap             harta (generată: șablonul Valve + relieful, 16384 x 16384)
   panorama/                      interfața (HUD, meniu de construcție, panou turn)
 tools/
   gen.py                         generatorul: date WC3 -> fișierele modului
@@ -46,6 +46,8 @@ python -I tools/luacheck_lite.py game/dota_addons/green_td/scripts/vscripts
 ```
 
 `gen.py` verifică fiecare model și efect în `dota_assets.txt` și afișează `WARNING` dacă lipsește ceva.
+Pentru hartă folosește Workshop Tools (`dmxconvert.exe` și harta-șablon `addon_template`); dacă Dota nu e în
+locul implicit, setează `DOTA_DIR` la folderul `dota 2 beta`.
 Modelele alese pentru fiecare turn/creep sunt în `TOWER_ART` și `CREEP_ART` din `gen.py`,
 decorurile WC3 în `DOODAD_ART`, tastele de construcție în `BUILD_KEYS`.
 
@@ -120,8 +122,12 @@ dota2.exe -steam -tools -addon green_td -condebug -novid -windowed -w 1280 -h 72
 - Modelele sunt din Dota (eroi, creepi, structuri). Turnurile cu model de erou poartă doar 2 cosmetice
   implicite (de regulă arma și capul) plus „montura” (liliacul lui Batrider, calul lui Chaos Knight);
   creepii nu au cosmetice. Setul complet pe ~340 de turnuri costa ~10 FPS, așa costă ~2.
-- Harta e plată; drumurile sunt desenate pe teren (particule `particles/gtd/path_dirt`), stâncile WC3
-  blochează mersul prin obstacole invizibile, iar minimapa e generată din grila WC3.
+- În WC3 harta e plată. Aici drumurile creepilor sunt cu un nivel (128) mai jos decât zonele de construit,
+  ca niște șanțuri cu faleze (`terrain_heights` în `gen.py` scrie înălțimile în grila de dale Dota).
+  Grila Dota are celule de 256, iar panta ocupă mijlocul celulei; pe jumătatea de jos a pantei nu se poate
+  construi (~6% din celulele de construit WC3, `Grid:MarkCliffs`), pe buza falezei și jos lângă drum da.
+  Builder-ul zboară, ca să treacă peste șanțuri. Drumurile au și particule de pământ (`particles/gtd/path_dirt`),
+  stâncile WC3 blochează mersul prin obstacole invizibile, iar minimapa e generată din grilă și relief.
 
 ## Performanță (măsurată, client în modul -tools, 1280x720)
 

@@ -10,15 +10,17 @@ and writes the Dota 2 addon data files:
   game/.../scripts/vscripts/gtd/data/map.lua        regions, creep paths, build grid
   game/.../resource/addon_english.txt               unit names
   content/.../panorama/scripts/custom_game/gtd_data.js   tower definitions for the UI
+  content/.../maps/green_td.vmap                    the terrain: creep paths one cliff level below the build zones
 
 Run from the repo root:  python -I tools/gen.py
 """
-import json, math, os, re, struct, sys
+import json, math, os, re, struct, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WC3 = os.path.join(ROOT, 'tools', 'wc3')
 GAME = os.path.join(ROOT, 'game', 'dota_addons', 'green_td')
 CONTENT = os.path.join(ROOT, 'content', 'dota_addons', 'green_td')
+DOTA = os.environ.get('DOTA_DIR', r'C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta')
 
 sys.path.insert(0, WC3)
 from slk import read_slk  # noqa: E402
@@ -546,6 +548,84 @@ def build_grid():
     return {'origin': [-6144, -6144], 'cell': 32, 'width': w, 'height': h, 'rows': rle}
 
 
+# ----------------------------------------------------------------------------- terrain
+# The WC3 map is flat. Here the creep paths run one cliff level (128 units) below the build zones, like a canyon.
+# Dota's tile grid (64 x 64 cells of 256 units from -8192) keeps one height level per cell corner and the map
+# compiler builds the cliffs: between a low and a high corner the slope fills the middle 128 units of the cell.
+TILE, TILE_N, TILE_ORIGIN = 256, 64, -8192
+LANE_MARGIN = 128       # corners this close to a creep path cell are low, so the whole WC3 path stays walkable
+LANE_MIN_CELLS = 1500   # smaller walkable-unbuildable areas are doodad footprints, not paths
+
+
+def grid_rows(grid):
+    return [''.join(k * int(n) for k, n in re.findall(r'([a-z])(\d+)', r)) for r in grid['rows']]
+
+
+def lane_cells(rows):
+    """The creep paths: the big connected areas of walkable, unbuildable cells."""
+    w, h = len(rows[0]), len(rows)
+    seen, lanes = set(), set()
+    for y in range(h):
+        for x in range(w):
+            if rows[y][x] != 'w' or (x, y) in seen:
+                continue
+            stack, comp = [(x, y)], []
+            seen.add((x, y))
+            while stack:
+                cx, cy = stack.pop()
+                comp.append((cx, cy))
+                for nx, ny in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
+                    if 0 <= nx < w and 0 <= ny < h and (nx, ny) not in seen and rows[ny][nx] == 'w':
+                        seen.add((nx, ny))
+                        stack.append((nx, ny))
+            if len(comp) >= LANE_MIN_CELLS:
+                lanes.update(comp)
+    return lanes
+
+
+def terrain_heights(grid):
+    """Height level (0 = path, 1 = build zone) of every tile grid corner, row by row from the bottom-left."""
+    rows = grid_rows(grid)
+    lanes = lane_cells(rows)
+    ox, oy, cell = grid['origin'][0], grid['origin'][1], grid['cell']
+    reach = LANE_MARGIN // cell + 1
+    heights = []
+    for vy in range(TILE_N + 1):
+        for vx in range(TILE_N + 1):
+            px, py = TILE_ORIGIN + TILE * vx, TILE_ORIGIN + TILE * vy
+            cx, cy = (px - ox) / cell, (py - oy) / cell
+            low = any((x, y) in lanes
+                      and abs(ox + cell * (x + 0.5) - px) <= LANE_MARGIN + cell / 2
+                      and abs(oy + cell * (y + 0.5) - py) <= LANE_MARGIN + cell / 2
+                      for y in range(int(cy) - reach, int(cy) + reach + 1)
+                      for x in range(int(cx) - reach, int(cx) + reach + 1))
+            heights.append(0 if low else 1)
+    return heights
+
+
+def write_vmap(heights):
+    """Copies Valve's flat template map with these corner heights (dmxconvert: binary DMX <-> keyvalues2 text)."""
+    conv = os.path.join(DOTA, 'game', 'bin', 'win64', 'dmxconvert.exe')
+    template = os.path.join(DOTA, 'content', 'dota_addons', 'addon_template', 'maps', 'template_map.vmap')
+    if not (os.path.exists(conv) and os.path.exists(template)):
+        WARNINGS.append('Dota 2 Workshop Tools not found (DOTA_DIR), maps/green_td.vmap not updated')
+        return
+    work = os.path.join(ROOT, '_work')
+    os.makedirs(work, exist_ok=True)
+    text_in, text_out = os.path.join(work, 'template_kv2.vmap'), os.path.join(work, 'green_td_kv2.vmap')
+    subprocess.run([conv, '-i', template, '-o', text_in, '-oe', 'keyvalues2'], check=True, capture_output=True)
+    src = open(text_in, encoding='utf-8').read()
+    start = src.index('"verticesHeight" "int_array"')
+    a, b = src.index('[', start), src.index(']', start)
+    if len(re.findall(r'"-?\d+"', src[a:b])) != len(heights):
+        sys.exit('unexpected tile grid size in ' + template)
+    body = '[\n' + ',\n'.join('\t\t\t\t\t\t"%d"' % v for v in heights) + '\n\t\t\t\t\t]'
+    open(text_out, 'w', encoding='utf-8', newline='\n').write(src[:a] + body + src[b + 1:])
+    dst = os.path.join(CONTENT, 'maps', 'green_td.vmap')
+    subprocess.run([conv, '-i', text_out, '-o', dst, '-oe', 'binary'], check=True, capture_output=True)
+    print('terrain: %d of %d tile corners on the creep paths' % (heights.count(0), len(heights)))
+
+
 SLOT_COLORS = ['red', 'blue', 'teal', 'purple', 'yellow', 'orange', 'green', 'pink', 'gray']
 START_LOCATIONS = [(64, 256), (-832, -2752), (832, -2752), (-4416, -2048), (4416, -2048),
                    (-4800, 4736), (4800, 4736), (-4864, 2304), (4864, 2176)]
@@ -635,11 +715,22 @@ def doodad_list():
     return out
 
 
-def write_minimap(grid):
-    """Minimap like the WC3 one: dirt paths, grass where towers can be built, dark blocked cells.
+def terrain_level(heights, x, y):
+    """0 on the path level .. 1 on the build zones, interpolated between the tile corners like the slopes."""
+    fx, fy = (x - TILE_ORIGIN) / TILE, (y - TILE_ORIGIN) / TILE
+    i, j = min(max(int(fx), 0), TILE_N - 1), min(max(int(fy), 0), TILE_N - 1)
+    tx, ty = fx - i, fy - j
+    h = lambda a, b: heights[b * (TILE_N + 1) + a]
+    return (h(i, j) * (1 - tx) * (1 - ty) + h(i + 1, j) * tx * (1 - ty)
+            + h(i, j + 1) * (1 - tx) * ty + h(i + 1, j + 1) * tx * ty)
+
+
+def write_minimap(grid, heights):
+    """Minimap like the WC3 one: dirt paths, grass where towers can be built, dark blocked cells, rocky cliffs.
     Dota maps the minimap to the tile grid bounds (-8192..8192)."""
     size, world = 512, 8192.0
     colors = {'b': (58, 110, 46), 'w': (150, 118, 72), 'x': (28, 34, 26)}
+    cliff, low_grass = (92, 84, 70), (44, 86, 36)
     rows = []
     for rle in grid['rows']:
         row = []
@@ -655,6 +746,11 @@ def write_minimap(grid):
             cx = int((wx - grid['origin'][0]) // grid['cell'])
             if 0 <= cy < grid['height'] and 0 <= cx < grid['width']:
                 r, g, b = colors[rows[cy][cx]]
+                level = terrain_level(heights, wx, wy)
+                if 0.25 < level < 0.75:
+                    r, g, b = cliff
+                elif level <= 0.25 and rows[cy][cx] == 'b':
+                    r, g, b = low_grass
             else:
                 r, g, b = (0, 0, 0)
             px += bytes((b, g, r))
@@ -783,7 +879,9 @@ def main():
     creeps = {c: creep_rec(c) for c in creep_ids}
     waves = wave_list()
     mp = map_data()
-    write_minimap(mp['grid'])
+    heights = terrain_heights(mp['grid'])
+    write_minimap(mp['grid'], heights)
+    write_vmap(heights)
 
     header = '-- GENERATED by tools/gen.py from the Green TD v36.0 map data. Do not edit by hand.\n'
     vs = os.path.join(GAME, 'scripts', 'vscripts', 'gtd', 'data')
